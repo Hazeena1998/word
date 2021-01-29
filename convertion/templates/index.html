@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block start %}
+<!DOCTYPE html>
+<body>
+    <div class="container">
+        <div>
+            <input id="it" type="text">
+            <button id="btt">convert</button>
+        </div>
+        <h1 id="th">output</h1>
+    </div>
+    <script>
+        var btnconvert = document.getElementById('btt');
+        var input = document.getElementById('it');
+        var output = document.getElementById('th');
+
+
+
+        document.getElementById('btt').addEventListener("click", function(){
+        document.getElementById('th').innerHTML=numberToWords.toWords(document.getElementById('it').value);
+
+        });
+    </script> 
+{% endblock start %}
+</body>
+
+          
+
+
+</html>
